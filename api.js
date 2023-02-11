@@ -1,3 +1,9 @@
+set();
+function set(){
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=Bangkok&units=metric&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
+    .then(response => response.json())
+    .then(data => showData(data));
+}
 function getTxt() {
     var txt = document.getElementById("txt").value;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${txt}&units=metric&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
@@ -21,6 +27,9 @@ function showTast(dataWe){
     document.getElementById("cwe-3").innerHTML =`${dataWe.city.name}`;
     document.getElementById("cwe-4").innerHTML =`${dataWe.city.name}`;
     document.getElementById("cw-t-1").innerHTML =`${dataWe.list[5].main.temp_min}°C`;
+    document.getElementById("cw-t-1").innerHTML =`${dataWe.list[10].main.temp_min}°C`;
+    document.getElementById("cw-t-1").innerHTML =`${dataWe.list[30].main.temp_min}°C`;
+    document.getElementById("cw-t-1").innerHTML =`${dataWe.list[38].main.temp_min}°C`;
     document.getElementById("img-1").src =`http://openweathermap.org/img/wn/${dataWe.list[5].weather[0].icon}@2x.png`;
     document.getElementById("img-2").src =`http://openweathermap.org/img/wn/${dataWe.list[10].weather[0].icon}@2x.png`;
     document.getElementById("img-3").src =`http://openweathermap.org/img/wn/${dataWe.list[30].weather[0].icon}@2x.png`;
