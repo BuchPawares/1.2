@@ -27,9 +27,9 @@ function showTast(dataWe){
     document.getElementById("cwe-3").innerHTML =`${dataWe.city.name}`;
     document.getElementById("cwe-4").innerHTML =`${dataWe.city.name}`;
     document.getElementById("cw-t-1").innerHTML =`${dataWe.list[5].main.temp_min}°C`;
-    document.getElementById("cw-t-1").innerHTML =`${dataWe.list[10].main.temp_min}°C`;
-    document.getElementById("cw-t-1").innerHTML =`${dataWe.list[30].main.temp_min}°C`;
-    document.getElementById("cw-t-1").innerHTML =`${dataWe.list[38].main.temp_min}°C`;
+    document.getElementById("cw-t-2").innerHTML =`${dataWe.list[10].main.temp_min}°C`;
+    document.getElementById("cw-t-3").innerHTML =`${dataWe.list[30].main.temp_min}°C`;
+    document.getElementById("cw-t-4").innerHTML =`${dataWe.list[38].main.temp_min}°C`;
     document.getElementById("img-1").src =`http://openweathermap.org/img/wn/${dataWe.list[5].weather[0].icon}@2x.png`;
     document.getElementById("img-2").src =`http://openweathermap.org/img/wn/${dataWe.list[10].weather[0].icon}@2x.png`;
     document.getElementById("img-3").src =`http://openweathermap.org/img/wn/${dataWe.list[30].weather[0].icon}@2x.png`;
