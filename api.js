@@ -26,6 +26,10 @@ function showTast(dataWe){
     document.getElementById("cwe-2").innerHTML =`${dataWe.city.name}`;
     document.getElementById("cwe-3").innerHTML =`${dataWe.city.name}`;
     document.getElementById("cwe-4").innerHTML =`${dataWe.city.name}`;
+    document.getElementById("dt-1").innerHTML =`${dataWe.list[11].dt_txt}`;
+    document.getElementById("dt-2").innerHTML =`${dataWe.list[19].dt_txt}`;
+    document.getElementById("dt-3").innerHTML =`${dataWe.list[27].dt_txt}`;
+    document.getElementById("dt-4").innerHTML =`${dataWe.list[35].dt_txt}`;
     document.getElementById("cw-t-1").innerHTML =`${dataWe.list[11].main.temp_min}°C`;
     document.getElementById("cw-t-2").innerHTML =`${dataWe.list[19].main.temp_min}°C`;
     document.getElementById("cw-t-3").innerHTML =`${dataWe.list[27].main.temp_min}°C`;
