@@ -13,8 +13,8 @@ function getTxt() {
 function showData(data){
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&units=metric&cnt=40&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(re => re.json())
+    //.then(dataWe => showTast(dataWe))
     .then(dataWe => console.log(dataWe))
-    .then(dataWe => showTast(dataWe))
     document.getElementById("demo").innerHTML =`${data.name}`;
     document.getElementById("demo1").innerHTML =`${data.main.temp_min}°C`;
     document.getElementById("demo2").innerHTML =`${data.sys.country}`;
