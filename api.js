@@ -22,6 +22,7 @@ function showData(data){
     document.getElementById("img-0").src =`http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
 }
 function showTast(dataWe){
+    console(dataWe)
     document.getElementById("cwe-1").innerHTML =`${dataWe.city.name}`;
     document.getElementById("cwe-2").innerHTML =`${dataWe.city.name}`;
     document.getElementById("cwe-3").innerHTML =`${dataWe.city.name}`;
