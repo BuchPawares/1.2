@@ -41,4 +41,8 @@ function dt(dataWe){
     document.getElementById("dw-2").innerHTML =`${dataWe.list[19].weather[0].description}`;
     document.getElementById("dw-3").innerHTML =`${dataWe.list[27].weather[0].description}`;
     document.getElementById("dw-4").innerHTML =`${dataWe.list[35].weather[0].description}`;
+    document.getElementById("v-1").innerHTML =`${dataWe.list[11].visibility}`;
+    document.getElementById("v-2").innerHTML =`${dataWe.list[19].visibility}`;
+    document.getElementById("v-3").innerHTML =`${dataWe.list[27].visibility}`;
+    document.getElementById("v-4").innerHTML =`${dataWe.list[35].visibility}`;
 }
