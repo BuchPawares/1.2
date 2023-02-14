@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
 
 * {
     margin: 0;
@@ -43,6 +45,7 @@
     
 }
 .form-h2{
+    font-family: 'Oswald', sans-serif;
     display: flex;
     width: 600px;
     font-weight: 700;
