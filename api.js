@@ -37,8 +37,8 @@ function showTast(dataWe){
     dt(dataWe);
 }
 function dt(dataWe){
-    document.getElementById("dt-1").innerHTML =`${dataWe.list[11].dt_txt}`;
-    document.getElementById("dt-2").innerHTML =`${dataWe.list[19].dt_txt}`;
-    document.getElementById("dt-3").innerHTML =`${dataWe.list[27].dt_txt}`;
-    document.getElementById("dt-4").innerHTML =`${dataWe.list[35].dt_txt}`;
+    document.getElementById("dw-1").innerHTML =`${dataWe.list[11].weather[2]}`;
+    document.getElementById("dw-2").innerHTML =`${dataWe.list[19].dt_txt}`;
+    document.getElementById("dw-3").innerHTML =`${dataWe.list[27].dt_txt}`;
+    document.getElementById("dw-4").innerHTML =`${dataWe.list[35].dt_txt}`;
 }
