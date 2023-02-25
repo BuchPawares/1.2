@@ -31,10 +31,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
 }
 .form-content{
+    height: 200px;
     margin-top: 30px;
     position: fixed;
     flex-direction: column;
@@ -42,7 +41,7 @@
     justify-content: center;
     align-items: center;
     width: 210px;
-    
+   
 }
 .form-h2{
     font-family: 'Oswald', sans-serif;
@@ -52,7 +51,8 @@
     justify-content: center;
     color: orange;
     font-size: 40px;
-    
+    margin-bottom: 20px;
+   
 }
 .wrapper{
     display: flex;
@@ -62,6 +62,7 @@
     background:gray;
     justify-content: center;
     border-radius: 50px;
+    
 }
 .wrapper .input-data{
     background: none;
