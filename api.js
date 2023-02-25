@@ -45,8 +45,8 @@ function dt(dataWe){
     document.getElementById("v-2").innerHTML =`ความชื้น ${dataWe.list[19].main.humidity}%`;
     document.getElementById("v-3").innerHTML =`ความชื้น ${dataWe.list[27].main.humidity}%`;
     document.getElementById("v-4").innerHTML =`ความชื้น ${dataWe.list[35].main.humidity}%`;
-    document.getElementById("dt-1").innerHTML =`Date${dataWe.list[11].dt_txt.slice(0, 10)}`;
-    document.getElementById("dt-2").innerHTML =`Date${dataWe.list[19].dt_txt.slice(0, 10)}`;
-    document.getElementById("dt-3").innerHTML =`Date${dataWe.list[27].dt_txt.slice(0, 10)}`;
+    document.getElementById("dt-1").innerHTML =`Date ${dataWe.list[11].dt_txt.slice(0, 10)}`;
+    document.getElementById("dt-2").innerHTML =`Date ${dataWe.list[19].dt_txt.slice(0, 10)}`;
+    document.getElementById("dt-3").innerHTML =`Date ${dataWe.list[27].dt_txt.slice(0, 10)}`;
     document.getElementById("dt-4").innerHTML =`Date ${dataWe.list[35].dt_txt.slice(0, 10)}`;
 }
