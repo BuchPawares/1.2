@@ -45,4 +45,5 @@ function dt(dataWe){
     document.getElementById("v-2").innerHTML =`ความชื้น ${dataWe.list[19].main.humidity}%`;
     document.getElementById("v-3").innerHTML =`ความชื้น ${dataWe.list[27].main.humidity}%`;
     document.getElementById("v-4").innerHTML =`ความชื้น ${dataWe.list[35].main.humidity}%`;
+    document.getElementById("dt-1").innerHTML =`${dataWe.list[11].dt_txt}`;
 }
