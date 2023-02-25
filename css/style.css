@@ -59,12 +59,12 @@
     align-items: flex-end;
     height: 70px;
     width: 190px;
-    background:transparent;
+    background:gray;
     justify-content: center;
-    
+    border-radius: 25px;
 }
 .wrapper .input-data{
-    background: chartreuse;
+    background: none;
     width: 100%;
     height: 25px;
     position: relative;
