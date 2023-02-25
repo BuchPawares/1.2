@@ -208,8 +208,14 @@
     font-family: 'Prompt', sans-serif;  
 
 }
-
-
+.wa{
+    position: absolute;
+    right: 0px;
+    width: 350px;
+    height: 210px;
+    border-radius: 25px;
+    background-color: aqua;
+}
 
 
 
