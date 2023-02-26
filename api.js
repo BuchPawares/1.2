@@ -58,7 +58,7 @@ function dt(dataWe){
 function showPM(){
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=Bangkok&units=metric&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(rea => rea.json())
-    .then(dataW => console(dataW));
+    .then(dataW => console.log(dataW));
     document.getElementById("pl-1").innerHTML =`PM2.5 : ${dataW.list[0].components.pm2_5} μg/m3`;
     document.getElementById("pl-2").innerHTML =`CO : ${dataW.list[0].components.co} μg / m3`;
     document.getElementById("pl-3").innerHTML =`คุณภาพอากาศระดับ : ${dataW.list[0].main.aqi}`;
