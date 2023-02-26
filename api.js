@@ -38,7 +38,7 @@ function showTast(dataWe){
     document.getElementById("img-2").src =`http://openweathermap.org/img/wn/${dataWe.list[19].weather[0].icon}@2x.png`;
     document.getElementById("img-3").src =`http://openweathermap.org/img/wn/${dataWe.list[27].weather[0].icon}@2x.png`;
     document.getElementById("img-4").src =`http://openweathermap.org/img/wn/${dataWe.list[35].weather[0].icon}@2x.png`;
-    showPM(dataWe);
+    dt(dataWe);
 }
 function dt(dataWe){
     document.getElementById("dw-1").innerHTML =`${dataWe.list[11].weather[0].description}`;
@@ -53,9 +53,16 @@ function dt(dataWe){
     document.getElementById("dt-2").innerHTML =`Date ${dataWe.list[19].dt_txt.slice(0, 10)}`;
     document.getElementById("dt-3").innerHTML =`Date ${dataWe.list[27].dt_txt.slice(0, 10)}`;
     document.getElementById("dt-4").innerHTML =`Date ${dataWe.list[35].dt_txt.slice(0, 10)}`;
+    showPM(dataWe)
 }
 function showPM(dataWe){
     fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${dataWe.city.coord.lat}&lon=${dataWe.city.coord.lon}&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(re => re.json())
-    .then(dataW => console.log(dataW))
+    //.then(dataW => console.log(dataW))
+    .then(dataW => showP(dataW))
 } 
+function showP(dataW){
+    document.getElementById("pl-1").innerHTML =`PM2.5 : ${dataW.list[0].components.pm2_5} μg/m3`;
+    document.getElementById("pl-2").innerHTML =`CO : ${dataW.list[0].components.co} μg / m3`;
+    document.getElementById("pl-3").innerHTML =`คุณภาพอากาศระดับ : ${dataW.list[0].main.aqi}`;
+}
