@@ -23,7 +23,7 @@ function showData(data){
     document.getElementById("demo2").innerHTML =`${data.sys.country}`;
     document.getElementById("demo3").innerHTML =`${data.weather[0].description}`;
     document.getElementById("img-0").src =`http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
-    pwed(data);
+    
 }
 function showTast(dataWe){
     document.getElementById("cwe-1").innerHTML =`${dataWe.city.name}`;
