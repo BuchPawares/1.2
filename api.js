@@ -2,13 +2,16 @@ set();
 function set(){
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=Bangkok&units=metric&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(response => response.json())
+    //.then(data => console.log(data))
     .then(data => showData(data));
+
 }
 function getTxt() {
     var txt = document.getElementById("txt").value;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${txt}&units=metric&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(response => response.json())
     .then(data => showData(data))
+    //.then(data => console.log(data))
 } 
 function showData(data){
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&units=metric&cnt=40&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
@@ -20,6 +23,7 @@ function showData(data){
     document.getElementById("demo2").innerHTML =`${data.sys.country}`;
     document.getElementById("demo3").innerHTML =`${data.weather[0].description}`;
     document.getElementById("img-0").src =`http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+    pwed(data);
 }
 function showTast(dataWe){
     document.getElementById("cwe-1").innerHTML =`${dataWe.city.name}`;
@@ -34,7 +38,7 @@ function showTast(dataWe){
     document.getElementById("img-2").src =`http://openweathermap.org/img/wn/${dataWe.list[19].weather[0].icon}@2x.png`;
     document.getElementById("img-3").src =`http://openweathermap.org/img/wn/${dataWe.list[27].weather[0].icon}@2x.png`;
     document.getElementById("img-4").src =`http://openweathermap.org/img/wn/${dataWe.list[35].weather[0].icon}@2x.png`;
-    dt(dataWe);
+    showPM(dataWe);
 }
 function dt(dataWe){
     document.getElementById("dw-1").innerHTML =`${dataWe.list[11].weather[0].description}`;
@@ -50,3 +54,8 @@ function dt(dataWe){
     document.getElementById("dt-3").innerHTML =`Date ${dataWe.list[27].dt_txt.slice(0, 10)}`;
     document.getElementById("dt-4").innerHTML =`Date ${dataWe.list[35].dt_txt.slice(0, 10)}`;
 }
+function showPM(dataWe){
+    fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${dataWe.city.coord.lat}&lon=${dataWe.city.coord.lon}&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
+    .then(re => re.json())
+    .then(dataW => console.log(dataW))
+} 
