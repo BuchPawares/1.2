@@ -58,7 +58,10 @@ function dt(dataWe){
 function showPM(dataWe){
     fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${dataWe.city.coord.lat}&lon=${dataWe.city.coord.lon}&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(rea => rea.json())
-    .then(dataW => showP(dataW));
+    .then(dataW => showP(dataW))
+    document.getElementById("pl-1").innerHTML =`PM2.5 : ${dataW.list[0].components.pm2_5} μg/m3`;
+    document.getElementById("pl-2").innerHTML =`CO : ${dataW.list[0].components.co} μg / m3`;
+    document.getElementById("pl-3").innerHTML =`คุณภาพอากาศระดับ : ${dataW.list[0].main.aqi}`;
 } 
 function showP(dataW){
     document.getElementById("pl-1").innerHTML =`PM2.5 : ${dataW.list[0].components.pm2_5} μg/m3`;
