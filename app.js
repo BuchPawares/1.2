@@ -53,7 +53,7 @@ function dt(dataWe){
     document.getElementById("dt-2").innerHTML =`Date ${dataWe.list[19].dt_txt.slice(0, 10)}`;
     document.getElementById("dt-3").innerHTML =`Date ${dataWe.list[27].dt_txt.slice(0, 10)}`;
     document.getElementById("dt-4").innerHTML =`Date ${dataWe.list[35].dt_txt.slice(0, 10)}`;
-    showPM(dataWe)
+    showPM(dataWe);
 }
 function showPM(dataWe){
     fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${dataWe.city.coord.lat}&lon=${dataWe.city.coord.lon}&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
