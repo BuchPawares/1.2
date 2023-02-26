@@ -16,7 +16,7 @@ function getTxt() {
 function showData(data){
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&units=metric&cnt=40&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(re => re.json())
-    .then(dataWe => showPM(dataWe))
+    .then(dataWe => )
     .then(dataWe => console.log(dataWe))
     document.getElementById("demo").innerHTML =`${data.name}`;
     document.getElementById("demo1").innerHTML =`${data.main.temp_min}°C`;
@@ -55,7 +55,7 @@ function dt(dataWe){
     showPM(dataWe)
 }
 function showPM(dataWe){
-    fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=50&lon=50&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
+    fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${dataWe.city.coord.lat}&lon=${dataWe.city.coord.lon}&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(rea => rea.json())
     .then(dataW => showP(dataW))
 } 
