@@ -58,8 +58,7 @@ function dt(dataWe){
 function showPM(dataWe){
     fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${dataWe.city.coord.lat}&lon=${dataWe.city.coord.lon}&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(re => re.json())
-    //.then(dataW => console.log(dataW))
-    .then(dataW => showP(dataW))
+    .then(dataW => showP(dataW));
 } 
 function showP(dataW){
     document.getElementById("pl-1").innerHTML =`PM2.5 : ${dataW.list[0].components.pm2_5} μg/m3`;
