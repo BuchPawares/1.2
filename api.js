@@ -66,3 +66,4 @@ function showP(dataW){
     document.getElementById("pl-2").innerHTML =`CO : ${dataW.list[0].components.co} μg / m3`;
     document.getElementById("pl-3").innerHTML =`คุณภาพอากาศระดับ : ${dataW.list[0].main.aqi}`;
 }
+typeof function myFunc(){} 
