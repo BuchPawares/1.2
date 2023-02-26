@@ -57,7 +57,7 @@ function dt(dataWe){
 }
 function showPM(dataWe){
     fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${dataWe.city.coord.lat}&lon=${dataWe.city.coord.lon}&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
-    .then(re => re.json())
+    .then(rea => rea.json())
     .then(dataW => showP(dataW));
 } 
 function showP(dataW){
