@@ -80,10 +80,11 @@
     background: none;
     border: none;
     color: white;
-    border-bottom: 2px solid orange
+    
     font-size: 16px;
     padding-left: 10px;
 }
+
 .wrapper .input-data label{
     position: absolute;
     bottom: 5px;
