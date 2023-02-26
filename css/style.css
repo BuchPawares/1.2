@@ -141,7 +141,7 @@
     justify-content: center;
     width: 550px;
     height: auto;
-    ;
+
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
@@ -215,9 +215,11 @@
     position: absolute;
     right: 0px;
     width: 350px;
-    height: 210px;
+    height: 250px;
     border-radius: 25px;
-    background-color: aqua;
+    background-color: rgba(247, 242, 176, 0.4);
+    overflow: hidden;
+    margin-right: 15px;
 }
 .navbar{
     position: absolute;
@@ -246,7 +248,7 @@
 	text-align: center;
 }
 .navbar .nav-links li{
-    font-family: ;
+
     font-size: 18px;
     font-weight: 700;
     padding: 1rem 2rem 1.15rem;
