@@ -15,7 +15,8 @@ function getTxt() {
 } 
 
 function showPM(PM){
-    fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${PM.city.coord.lat}&lon=&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
+    var api = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${PM.city.coord.lat}&lon=${PM.city.coord.lon}&appid=a5551a799c6cda11fc25322be201b948&lang=th`;
+    fetch(api)
     .then(re => re.json())
     .then(dataW => showP(dataW));
 } 
