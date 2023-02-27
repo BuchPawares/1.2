@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    list-style: none;
+} 
+.body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    
+}
+.cb{
+    background-color: black;
+    justify-content: center;
+    display: flex;
+}
+.navbar{
+    margin-top: 15px;
+    position: absolute;
+    padding-left: 35px;
+    padding-right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.navbar a{
+    color: white;
+}
+.navbar .logo{
+    font-size: 25px;
+    font-weight: 700;
+}
+.navbar .nav-links ul{
+    display: flex;
+	width: 100%;
+	margin: auto;
+	max-width: 1000px;
+	justify-content: space-between;
+	text-align: center;
+}
+.navbar .nav-links a{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1rem 2rem 1.15rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ebebeb;
+	min-width: 80px;
+	margin-right: 20px;
+}
+.navbar .nav-links a:hover {
+    background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+    background-size: 100% 100%;
+    color: #27262c;
+    animation: spring 300ms ease-out;
+    text-shadow: 0 -1px 0 #ef816c;
+    font-weight: bold;
+}
+.navbar .nav-links a:active {
+    transform: translateY(4px);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 1800px;
+    height: 900px;
+    background-color: coral;
+    border-radius: 30px;
+}
+.con-dp{
+    border: solid black;
+    display: flex;
+    align-items: center;
+}
+.con-a{
+    width: 480px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 30px;
+    border: solid aqua;
+}
