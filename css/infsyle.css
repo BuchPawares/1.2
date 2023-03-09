@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    list-style: none;
+} 
+.body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    }
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.bc{
+    display: flex;
+    justify-content: center;
+}
+.con{
+    width: 1300px;
+    height: auto;;
+    background-color: rgb(255, 123, 0);
+}
+.navbar{
+    position: absolute;
+    padding-left: 35px;
+    padding-right: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.navbar a{
+    color: white;
+}
+.navbar .logo{
+    font-size: 25px;
+    font-weight: 700;
+}
+.navbar .nav-links ul{
+    display: flex;
+	width: 100%;
+	margin: auto;
+	max-width: 1000px;
+	justify-content: space-between;
+	text-align: center;
+}
+.navbar .nav-links a{
+
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1rem 2rem 1.15rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ebebeb;
+	min-width: 80px;
+	margin-right: 20px;
+}
+.navbar .nav-links a:hover {
+    background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+    background-size: 100% 100%;
+    color: #27262c;
+    animation: spring 300ms ease-out;
+    text-shadow: 0 -1px 0 #ef816c;
+    font-weight: bold;
+}
+.navbar .nav-links a:active {
+    transform: translateY(4px);
+}
+.form{
+    position: relative;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-content{
+    height: 200px;
+    margin-top: 30px;
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+   
+}
+.form-h2{
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    width: 600px;
+    font-weight: 700;
+    justify-content: center;
+    color: orange;
+    font-size: 40px;
+    margin-bottom: 20px;
+   
+}
+.wrapper{
+    display: flex;
+    align-items: flex-end;
+    height: 35px;
+    width: 200px;
+    background:gray;
+    justify-content: center;
+    border-radius: 50px;
+    
+}
+.wrapper .input-data{
+    background: none;
+    width: 100%;
+    height: 25px;
+    position: relative;
+    bottom: 5px;
+}
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.wrapper .input-data label{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    margin-left: 10px;
+    color: orange;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-30px);
+    font-size: 16px;
+    color: black;
+}
+.input-button{
+    position: relative;
+    margin-top: 5px;
+    width: 200px;
+    height: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.input-button input{
+    padding: 5px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    color: coral;
+    border: orange solid 2px;
+    font-weight: 700;
+    border-radius: 30px;
+}
+.button:hover{
+    background: orange;
+    color: white;
+    transition: .5s;
+}
