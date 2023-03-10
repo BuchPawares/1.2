@@ -9,37 +9,37 @@ function getTxt() {
     var txt = document.getElementById("txt").value;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${txt}&units=metric&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(response => response.json())
-    .then(dataWe => showPM(dataWe))
+    .then(dataWe => showTast(dataWe))
     //.then(data => console.log(data))
 }
 function showTast(dataWe){
-    document.getElementById("lon").innerHTML =`${dataWe.coord.lon}`;
-    document.getElementById("lat").innerHTML =`${dataWe.coord.lat}`;
-    document.getElementById("temp").innerHTML =`${dataWe.main.temp}`;
-    document.getElementById("temp_min").innerHTML =`${dataWe.main.temp_min}`;
-    document.getElementById("temp_max").innerHTML =`${dataWe.main.temp_max}`;
-    document.getElementById("feels_like").innerHTML =`${dataWe.main.feels_like}`;
-    document.getElementById("pressure").innerHTML =`${dataWe.main.pressure}`;
-    document.getElementById("humidity").innerHTML =`${dataWe.main.humidity}`;
-    document.getElementById("grnd_level").innerHTML =`${dataWe.main.grnd_level}`;
-    document.getElementById("sea_level").innerHTML =`${dataWe.main.sea_level}`;
-    document.getElementById("wind_speed").innerHTML =`${dataWe.wind.speed}`;
-    document.getElementById("wind_deg").innerHTML =`${dataWe.wind.deg}`;
-    document.getElementById("wind_gus").innerHTML =`${dataWe.wind.gust}`;
-    showTast(dataWe);
+    document.getElementById("lon").innerHTML =`ละติจูด : ${dataWe.coord.lon}`;
+    document.getElementById("lat").innerHTML =`ลองจิจูด : ${dataWe.coord.lat}`;
+    document.getElementById("temp").innerHTML =`อุณหภูมิ : ${dataWe.main.temp}°C`;
+    document.getElementById("temp_min").innerHTML =`อุณหภูมิต่ำสุด : ${dataWe.main.temp_min}°C`;
+    document.getElementById("temp_max").innerHTML =`อุณหภูมิสูงสุด : ${dataWe.main.temp_max}°C`;
+    document.getElementById("feels_like").innerHTML =`อุณหภูมิเฉลี่ย : ${dataWe.main.feels_like}°C`;
+    document.getElementById("pressure").innerHTML =`ความดันบรรยากาศ : ${dataWe.main.pressure} hPa`;
+    document.getElementById("humidity").innerHTML =`ความชื้น : ${dataWe.main.humidity}%`;
+    document.getElementById("grnd_level").innerHTML =`ความดันบรรยากาศระดับน้ําทะเล : ${dataWe.main.grnd_level} hPa`;
+    document.getElementById("sea_level").innerHTML =`ความดันบรรยากาศพื้นดิน : ${dataWe.main.sea_level} hPa`;
+    document.getElementById("wind_speed").innerHTML =`ความเร็วลม : ${dataWe.wind.speed} เมตร/วินาที`;
+    document.getElementById("wind_deg").innerHTML =`ทิศทางลมองศา : ${dataWe.wind.deg} องศา`;
+    document.getElementById("wind_gus").innerHTML =`ลมกระโชกแรง : ${dataWe.wind.gust} เมตร/วินาที`;
+    document.getElementById("visibility").innerHTML =`ทัศนวิสัย : ${dataWe.visibility} เมตร`;
+    showTas(dataWe);
 }
-function showTast(dataWe){
+function showTas(dataWe){
     document.getElementById("name").innerHTML =`${dataWe.name}`;
     document.getElementById("country").innerHTML =`${dataWe.sys.country}`;
-    document.getElementById("weather_main").innerHTML =`${dataWe.weather.main}`;
-    document.getElementById("description").innerHTML =`${dataWe.weather.description}`;
-    document.getElementById("img-1").src =`http://openweathermap.org/img/wn/${dataWe.weather.icon}@2x.png`;
+    document.getElementById("description").innerHTML =`${dataWe.weather[0].description}`;
+    document.getElementById("img-1").src =`http://openweathermap.org/img/wn/${dataWe.weather[0].icon}@2x.png`;
     showPM(dataWe);
 }
 function showPM(dataWe){
     fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${dataWe.coord.lat}&lon=${dataWe.coord.lon}&appid=a5551a799c6cda11fc25322be201b948&lang=th`)
     .then(rea => rea.json())
-    .then(dataW => console.log(dataW))
+    //.then(dataW => console.log(dataW))
     .then(dataW => showP(dataW))
 } 
 function showP(dataW){
