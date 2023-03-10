@@ -229,6 +229,7 @@
 .we-Date{
     display: flex;
     flex-direction: row-reverse;
+    
 }
 .pl-h{margin-bottom: 25px;
     display: flex;
