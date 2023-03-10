@@ -64,3 +64,28 @@ function showP(dataW){
     document.getElementById("pl-2").innerHTML =`CO : ${dataW.list[0].components.co} μg / m3`;
     document.getElementById("pl-3").innerHTML =`คุณภาพอากาศระดับ : ${dataW.list[0].main.aqi}`;
 }
+
+function translate(sentences, targetDiv, from_lang ='th', to_lang='en'){
+	/*if (language == 'english') {
+		endPoint = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=ar&tl=en&dt=t&ie=UTF-8&oe=UTF-8&q="
+	} */
+  
+  sentences = sentences.replace(/\n/g, '<br>')
+  let endPoint = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${from_lang}&tl=${to_lang}&dt=t&ie=UTF-8&oe=UTF-8&q=${encodeURIComponent(sentences)}` ;
+						
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+		var jsonText = JSON.parse(this.responseText);
+		text = jsonText[0][0][0]
+		text = text.replace(/<br>/g, '\n')
+      targetDiv.innerHTML = "&nbsp;" + text;	  
+    }
+  };
+  xhttp.open("GET", endPoint, true);
+  xhttp.send();
+}
+
+function submit_thai2en(){		
+	translate(input_area.value, translated_area)
+}
