@@ -226,6 +226,10 @@
     justify-content: flex-end;
     padding: 5px;
 }
+.we-Date{
+    display: flex;
+    flex-direction: row-reverse;
+}
 .pl-h{margin-bottom: 25px;
     display: flex;
     color: brown;
